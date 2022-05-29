@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Szczegoly {% endblock %}
+{% block content %}
+    <!-- Header -->
+    <header id="header" class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>SZCZEGÓŁY UDOSTĘPNIANYCH DANYCH</h1>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+
+    <!-- Breadcrumbs -->
+    <div class="ex-basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumbs">
+                        <a href="{% url 'index' %}">STRONA GŁÓWNA</a><i class="fa fa-angle-double-right"></i><span>JAK DZIAŁAMY?</span>
+                    </div> <!-- end of breadcrumbs -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of breadcrumbs -->
+
+
+    <!-- Privacy Content -->
+    <div class="ex-basic-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="image-container-large">
+                        <img class="img-fluid" src="{% static 'main/images/article-details-large.jpg' %}" alt="alternative">
+                    </div> <!-- end of image-container-large -->
+                    <div class="text-container">
+                        <h3>Analiza biznesowa i testy jakościowe</h3>
+                        <p>Nasza strona automatycznie zbiera i otrzymuje określone informacje z Twojego komputera lub urządzenia mobilnego, w tym czynności, które wykonujesz w naszej Witrynie, Platformach i Aplikacjach, rodzaj używanego sprzętu i oprogramowania (na przykład system operacyjny lub przeglądarka) oraz informacje uzyskane z plików cookies. Na przykład za każdym razem, gdy odwiedzasz Witrynę lub w inny sposób korzystasz z Usług, automatycznie zbieramy Twój adres IP, typ przeglądarki i urządzenia, czasy dostępu, stronę internetową, z której przyszedłeś, regiony, z których poruszasz się po stronie internetowej oraz strony internetowe, do których uzyskujesz dostęp (jeśli dotyczy).</p>
+                        <p>Kiedy po raz pierwszy rejestrujesz konto i korzystasz z Usług, gromadzimy niektóre Dane osobowe o Tobie, takie jak:</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled li-space-lg indent">
+                                    <li class="media">
+                                        <i class="fas fa-square"></i>
+                                        <div class="media-body">Obszar geograficzny, w którym korzystasz z komputera i urządzeń mobilnych, powinien być taki sam jak w Twoim oprogramowaniu</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-square"></i>
+                                        <div class="media-body">Twoje imię i nazwisko, nazwę użytkownika i adres e-mail oraz inne dane kontaktowe</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-square"></i>
+                                        <div class="media-body">Unikalny identyfikator użytkownika(ciąg alfanumeryczny), który jest przypisywany podczas rejestracji, powinien zawsze znajdować się z przodu</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-square"></i>
+                                        <div class="media-body">Kopia zapasowa każdego systemu jest regularnie tworzona i nie zawiedzie</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-square"></i>
+                                        <div class="media-body">Twój adres IP i, w stosownych przypadkach, znacznik czasu związany z Twoją zgodą i potwierdzeniem zgody, ale upewnij się, że tak</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-square"></i>
+                                        <div class="media-body">Inne informacje przekazane przez Ciebie lub przedstawicieli Twojej organizacji różnymi metodami i praktykowanymi technikami</div>
+                                    </li>
+                                </ul>
+                            </div> <!-- end of col -->
+
+                            <div class="col-md-6">
+                                <ul class="list-unstyled li-space-lg indent">
+                                    <li class="media">
+                                        <i class="fas fa-square"></i>
+                                        <div class="media-body">Twój adres rozliczeniowy i wszelkie inne informacje niezbędne do sfinalizowania jakiejkolwiek transakcji finansowej, a podczas dokonywania zakupów za pośrednictwem Usług możemy również zbierać informacje o Twojej karcie kredytowej lub PayPal lub wszelkie inne wrażliwe dane, które uznasz</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-square"></i>
+                                        <div class="media-body">Treści generowane przez użytkowników (takie jak wiadomości, posty, komentarze, strony, profile, obrazy, kanały lub komunikaty wymieniane na Obsługiwanych platformach, z których można korzystać)</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-square"></i>
+                                        <div class="media-body">Obrazy lub inne pliki, które możesz publikować za pośrednictwem naszych Usług</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-square"></i>
+                                        <div class="media-body">Informacje (takie jak wiadomości, posty, komentarze, strony, profile, obrazy), które możemy otrzymać w związku z wysyłanymi do nas wiadomościami, takimi jak zapytania lub komentarze dotyczące</div>
+                                    </li>
+                                </ul>
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+                    </div> <!-- end of text-container-->
+                    
+                    <div class="text-container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Poprawa strategii produktu</h3>
+                                <p>Strona ta również automatycznie zbiera i otrzymuje określone informacje z Twojego komputera lub urządzenia mobilnego, w tym czynności, które wykonujesz w naszej Witrynie, Platformach i Aplikacjach, rodzaj używanego sprzętu i oprogramowania (na przykład system operacyjny lub przeglądarka) oraz informacje uzyskane z plików cookies.</p>
+                                <p>Na przykład za każdym razem, gdy odwiedzasz Witrynę lub w inny sposób korzystasz z Usług, automatycznie zbieramy Twój adres IP, typ przeglądarki i urządzenia, czasy dostępu, stronę internetową.</p>
+                                <p>Najlepszym sposobem promowania produktów cyfrowych jest zapewnienie potencjalnym użytkownikom bezpłatnych wersji, które można testować przez cały okres użytkowania produktu.</p>
+                            </div> <!-- end of col -->
+                            <div class="col-md-6">
+                                <div class="image-container-small">
+                                    <img class="img-fluid" src="{% static 'main/images/article-details-small.jpg' %}" alt="alternative">
+                                </div> <!-- end of image-container-small -->
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+                    </div> <!-- end of text-container -->
+
+
+                    <div class="text-container last">
+                        <h3>Ocena i prognozy projektu</h3>
+					    <p>Korzystając z którejkolwiek z Usług lub przesyłając lub zbierając jakiekolwiek Dane Osobowe za pośrednictwem Usług, wyrażasz zgodę na zbieranie, przekazywanie, przechowywanie i wykorzystywanie Twoich Danych Osobowych w sposób określony w niniejszej Polityce Prywatności. Jeśli nie wyrażasz zgody na wykorzystywanie swoich Danych osobowych w ten sposób, zaprzestań korzystania z Usług. Informacje w sposób określony w niniejszej Polityce Prywatności. Jeśli nie wyrażasz zgody na wykorzystywanie swoich Danych osobowych w ten sposób, zaprzestań korzystania z Usług.</p>
+                    </div> <!-- end of text-container -->
+                    <a class="btn-outline-reg" href="{% url 'index' %}">POWRÓT</a>
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-2 -->
+    <!-- end of privacy content -->
+
+
+    <!-- Breadcrumbs -->
+    <div class="ex-basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumbs">
+                        <a href="{% url 'index' %}">STRONA GŁÓWNA</a><i class="fa fa-angle-double-right"></i><span>JAK DZIAŁAMY?</span>
+                    </div> <!-- end of breadcrumbs -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of breadcrumbs -->
+
+
+{% endblock %}

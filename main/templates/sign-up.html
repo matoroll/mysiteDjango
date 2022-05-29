@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!-- Header -->
+    <header id="header" class="ex-2-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Zarejestruj się</h1>
+                   <p>Wypełnij formularz w celu rejestracji. Już to robiłeś? W takim razie <a class="white" href="{% url 'log-in' %}">Zaloguj się</a></p> 
+                    <!-- Sign Up Form -->
+                    <div class="form-container">
+                        <form id="signUpForm" data-toggle="validator" data-focus="false">
+                            <div class="form-group">
+                                <input type="email" class="form-control-input" id="semail" required>
+                                <label class="label-control" for="semail">Email</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control-input" id="sname" required>
+                                <label class="label-control" for="sname">Nazwa</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control-input" id="spassword" required>
+                                <label class="label-control" for="spassword">Hasło</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="sterms" value="Agreed-to-Terms" required>Zgadam się z <a href="{% url 'privacy-policy' %}">polityką prywatność</a> oraz <a href="{% url 'terms-conditions' %}">warunkami użytkowania</a>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control-submit-button">Zarejestruj się </button>
+                            </div>
+                            <div class="form-message">
+                                <div id="smsgSubmit" class="h3 text-center hidden"></div>
+                            </div>
+                        </form>
+                    </div> <!-- end of form container -->
+                    <!-- end of sign up form -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+
+{% endblock %}
+
+{% block footer %} {% endblock %}
