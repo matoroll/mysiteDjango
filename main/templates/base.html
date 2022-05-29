@@ -90,7 +90,11 @@
                     </li>
                 </ul>
                 <span class="nav-item">
+                    {% if user.is_authenticated %}
+                    <a class="btn-outline-sm" href="{% url 'log-out' %}">WYLOGUJ SIĘ</a>
+                    {% else %}
                     <a class="btn-outline-sm" href="{% url 'log-in' %}">ZALOGUJ SIĘ</a>
+                    {% endif %}
                 </span>
             </div>
         </div> <!-- end of container -->

@@ -16,7 +16,11 @@
                             <h1>Z PASJĄ DO MOTORYZACJI
                             </h1>
                             <p class="p-large">Poznaj naszą ofertę, skontaktuj się z nami, umów wizytę, ciesz się dobrze wykonaną robotą</p>
+                            {% if user.is_authenticated %}
+                            <p class="p-large"> Witaj {{ user.get_username }}, udanego przeglądania.</p> 
+                            {% else %}
                             <a class="btn-solid-lg page-scroll" href="{% url 'log-in' %}">ZALOGUJ SIĘ</a>
+                            {%endif%}
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
                     <div class="col-lg-6 col-xl-7">
