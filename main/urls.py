@@ -13,6 +13,7 @@ urlpatterns = [
     path("logout_user", views.logout_user, name="log-out"),
     path("sign-up.html", views.signup_user, name="sign-up"),
 
+    path("index.html", views.make_visit, name="make-visit"),
 
 
 ]

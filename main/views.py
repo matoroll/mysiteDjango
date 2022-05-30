@@ -62,3 +62,15 @@ def signup_user(request):
     return render(request, 'sign-up.html', {
         'form':form,
     })
+
+
+
+
+def make_visit(request):
+    if request.method == "POST":
+        messages.success(request, ("Wysłano zapytanie o wizytę"))
+        return redirect('index')
+
+    else:
+        messages.success(request, ("Złe dane wejściowe, spróbuj ponownie"))
+        return redirect('index')

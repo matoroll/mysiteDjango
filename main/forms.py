@@ -39,4 +39,3 @@ class RegisterUserForm(UserCreationForm):
         self.fields['password2'].help_text = ''
 
 
-

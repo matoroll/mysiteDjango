@@ -656,6 +656,43 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
+
+                    {% if user.is_authenticated %}
+                    <div class="text-container">
+                        <div class="above-heading">Witaj {{ user.get_username }}, Umówić wizytę?</div>
+                        <h2>Wyznacz datę podaj email a nasi eksperci wyślą wiadomość z potwierdzeniem wizyty lub zaoferują inny termin.</h2>
+
+                    <!-- Newsletter Form -->
+                        <form action = "{% url 'make-visit' %}" method = POST>
+                            {% csrf_token %}
+
+                            <div class="form-group">
+                                <input type="email" class="form-control-input" id="email" required>
+                                <label class="label-control" for="email">Email</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="date" class="form-control-input" name="dataofvisit" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="form-control-submit-button">Wyślij zapytanie o termin </button>
+                            </div> 
+                            {% if messages %}
+                                {% for message in messages %}
+                                    {{ message }}
+                                {% endfor %}
+                            {% endif %}
+   
+                            <script>
+
+                              </script>                  
+                        </form>
+                        <!-- end of newsletter form -->
+                    </div> <!-- end of text-container -->
+
+                    {% else %}
                     <div class="text-container">
                         <div class="above-heading">SUBSKRYBCJA</div>
                         <h2>Pozostań na bieżąco poprzez zezwolenie na wysyłanie syfu na twoją skrzynkę pocztową</h2>
@@ -679,8 +716,10 @@
                             </div>
                         </form>
                         <!-- end of newsletter form -->
-
                     </div> <!-- end of text-container -->
+                    {%endif%}
+
+
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
